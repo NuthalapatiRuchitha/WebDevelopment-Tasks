@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <h1>Tic Tac Toe Game</h1>
+    
+    <div id="modeScreen" class="mode-screen">
+        <h2>Select Game Mode</h2>
+        <button class="mode-button" onclick="selectMode('pvp')">Player vs Player</button>
+        <button class="mode-button" onclick="selectMode('ai')">Player vs AI</button>
+    </div>
+
+    <div id="nameScreen" class="name-screen hidden">
+        <h2>Enter Player Names</h2>
+        <div>
+            <input type="text" id="player1Name" placeholder="Player 1 Name (X)" autocomplete="off">
+        </div>
+        <div>
+            <input type="text" id="player2Name" placeholder="Player 2 Name (O)" autocomplete="off">
+        </div>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="backToMode()">Back</button>
+    </div>
+
+    <div id="aiNameScreen" class="name-screen hidden">
+        <h2>Enter Your Name</h2>
+        <div>
+            <input type="text" id="playerName" placeholder="Your Name" autocomplete="off">
+        </div>
+        <button onclick="startAIGame()">Start Game</button>
+        <button onclick="backToMode()">Back</button>
+    </div>
+
+    <div id="gameScreen" class="hidden">
+        <div id="score">
+            <span id="player1Score">Player 1: 0</span> | 
+            <span id="drawScore">Draw: 0</span> | 
+            <span id="player2Score">Player 2: 0</span>
+        </div>
+        
+        <div id="message">Player X's turn</div>
+        
+        <div class="board">
+            <div class="cell" onclick="makeMove(0)"></div>
+            <div class="cell" onclick="makeMove(1)"></div>
+            <div class="cell" onclick="makeMove(2)"></div>
+            <div class="cell" onclick="makeMove(3)"></div>
+            <div class="cell" onclick="makeMove(4)"></div>
+            <div class="cell" onclick="makeMove(5)"></div>
+            <div class="cell" onclick="makeMove(6)"></div>
+            <div class="cell" onclick="makeMove(7)"></div>
+            <div class="cell" onclick="makeMove(8)"></div>
+        </div>
+        
+        <button onclick="resetGame()">Reset Game</button>
+        <button onclick="backToNames()">Back</button>
+    </div>
+    
+    <script src="script3.js"></script>
+</body>
+</html>
