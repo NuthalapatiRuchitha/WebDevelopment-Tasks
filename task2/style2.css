@@ -1,0 +1,128 @@
+/* Basic page setup */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main box styling */
+        .stopwatch-box {
+            background: white;
+            width: 450px;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        /* Heading style */
+        .heading {
+            font-size: 36px;
+            color: #ff6b6b;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        /* Timer display area */
+        .timer {
+            font-size: 64px;
+            color: #ff8787;
+            font-weight: bold;
+            margin: 35px 0;
+            letter-spacing: 2px;
+        }
+
+        /* Button container */
+        .button-group {
+            margin: 25px 0;
+        }
+
+        /* All buttons */
+        .btn {
+            padding: 16px 30px;
+            margin: 8px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .btn:hover:not(:disabled) {
+            transform: scale(1.05);
+        }
+
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* Individual button colors */
+        .btn-start {
+            background-color: #a8e6cf;
+            color: #2d5016;
+        }
+
+        .btn-pause {
+            background-color: #ffd3b6;
+            color: #8b4513;
+        }
+
+        .btn-reset {
+            background-color: #ffaaa5;
+            color: #8b0000;
+        }
+
+        .btn-lap {
+            background-color: #dcedc1;
+            color: #3d5a00;
+        }
+
+        /* Lap section */
+        .laps-area {
+            margin-top: 30px;
+        }
+
+        .laps-title {
+            font-size: 22px;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .laps-container {
+            background: #fff5f5;
+            border-radius: 12px;
+            padding: 20px;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .lap-entry {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .lap-label {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .lap-value {
+            color: #708090;
+        }
+
+        .no-data {
+            color: #b0b0b0;
+            font-style: italic;
+        }
